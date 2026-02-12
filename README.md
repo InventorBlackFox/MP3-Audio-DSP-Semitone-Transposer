@@ -45,3 +45,38 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 * *spectral processing*
 * *phase adjustment*
 * *frequency scaling*
+
+**...................................................................................................................................................................................................................**
+
+🎧 CORE KEY FEATURES:
+
+1.🎵 Multi-Semitone Pitch Transposition:
+
+* *Generates pitch-shifted audio from -12 to +12 semitones*
+
+* *Uses SoX pitch transform for proper audio shifting*
+
+* *Pre-renders all versions for instant switching*
+
+**...................................................................................................................................................................................................................**
+
+2.⌨️ Real-Time Keyboard Control System:
+
+* *Live hotkey controls during playback*
+
+* *No UI needed — pure keyboard command mode*
+
+* *Instant response stepping between pitches*
+
+**...................................................................................................................................................................................................................**
+
+3.🔁 Dual Loop Modes:
+
+* *Bounce mode: auto steps between -12 ↔ +12*
+
+* *Lock mode: repeats same semitone forever*
+
+* *Toggleable live during playback*
+
+**...................................................................................................................................................................................................................**
+
