@@ -53,9 +53,7 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 1.🎵 Multi-Semitone Pitch Transposition:
 
 * *Generates pitch-shifted audio from -12 to +12 semitones*
-
 * *Uses SoX pitch transform for proper audio shifting*
-
 * *Pre-renders all versions for instant switching*
 
 **...................................................................................................................................................................................................................**
@@ -63,9 +61,7 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 2.⌨️ Real-Time Keyboard Control System:
 
 * *Live hotkey controls during playback*
-
 * *No UI needed — pure keyboard command mode*
-
 * *Instant response stepping between pitches*
 
 **...................................................................................................................................................................................................................**
@@ -73,10 +69,26 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 3.🔁 Dual Loop Modes:
 
 * *Bounce mode: auto steps between -12 ↔ +12*
-
 * *Lock mode: repeats same semitone forever*
-
 * *Toggleable live during playback*
 
 **...................................................................................................................................................................................................................**
 
+4.📂 Automatic MP3 Detection:
+
+* *Scans script folder for MP3 files*
+* *Dynamic song list generation*
+* *User selection by index*
+* *Wraparound navigation between songs*
+
+**...................................................................................................................................................................................................................**
+
+5.🧱 Modular Function Structure:
+
+* *pitch shift function*
+* *render pipeline*
+* *stepping logic*
+* *song navigation*
+* *control loop*
+
+**...................................................................................................................................................................................................................**
