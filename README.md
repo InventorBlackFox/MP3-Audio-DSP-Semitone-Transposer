@@ -195,4 +195,14 @@ Make sure this folder path exists or can be created.
 * **MP3 AND WAV FILE FORMATS INVOLVED**
 
 **...................................................................................................................................................................................................................**
+
+
+**⚠️ NOTES:**
+
+* **Terminal window must stay focused for hotkeys**
+* **First render takes time (creates all 25 pitch versions)**
+* **Designed for Windows environment (path + keyboard lib)**
+* **On Linux/macOS, global hotkeys may require running with elevated permissions or may behave differently depending on the window system**
+
+**...................................................................................................................................................................................................................**
 **...................................................................................................................................................................................................................**
