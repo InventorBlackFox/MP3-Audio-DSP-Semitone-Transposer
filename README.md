@@ -20,7 +20,7 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 
 
 
-🧪 WHAT THIS TOOL IS  PERFECT FOR:
+**🧪 WHAT THIS TOOL IS  PERFECT FOR:**
 
 🎤 Vocal range practice:
 **When you upload instrumentals of a song and want to see which semitone best suits your voice for singing purposes.**
@@ -48,7 +48,7 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 
 **...................................................................................................................................................................................................................**
 
-🎧 CORE KEY FEATURES:
+**🎧 CORE KEY FEATURES:**
 
 1.🎵 Multi-Semitone Pitch Transposition:
 
@@ -90,5 +90,19 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 * *stepping logic*
 * *song navigation*
 * *control loop*
+
+**...................................................................................................................................................................................................................**
+
+
+**⚙️ HOW IT ACTUALLY WORKS:**
+
+* *The program scans the script folder for MP3 files and lets the user select one.*
+* *The selected track is loaded and converted to WAV format.*
+* *Using SoX pitch transformation, the audio is rendered into 25 shifted versions (−12 to +12 semitones).*
+* *All shifted files are stored temporarily for fast switching.*
+* *Audio playback is handled by ffplay in headless mode.*
+* *Keyboard hotkeys control pitch stepping, song switching, and loop behavior in real time.*
+* *Boundary logic prevents repeated edge semitones and keeps stepping smooth.*
+* *Temp files are cleaned automatically before each new render cycle.*
 
 **...................................................................................................................................................................................................................**
