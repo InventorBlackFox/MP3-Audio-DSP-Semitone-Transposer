@@ -148,8 +148,12 @@ pip install pydub sox keyboard
 
 * **Install FFmpeg and make sure ffmpeg and ffplay are available in your system PATH.**
 * **Test in terminal:**
-* **ffmpeg -version**
-* **ffplay -version**
+```bash
+ ffmpeg -version
+```
+```bash
+ ffplay -version
+```
 * **If both print version info — you’re good.**
 
 **...................................................................................................................................................................................................................**
@@ -159,8 +163,9 @@ pip install pydub sox keyboard
 * **Install SoX and ensure it is added to PATH.**
 
 * **Test:**
-
-* **sox --version**
+```bash
+ sox --version
+```
 
 **...................................................................................................................................................................................................................**
 
