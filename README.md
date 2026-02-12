@@ -108,82 +108,75 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 **...................................................................................................................................................................................................................**
 
 
-🧰 Prerequisites
+**🧰 PREREQUISITES:**
 
-Make sure these are installed on your system before running the script:
-
-Python 3.9 or higher
-
-FFmpeg (must include ffplay)
-
-SoX (Sound eXchange)
-
-Windows OS (recommended — hotkeys tested here)
-
-Python packages required:
-
-pydub
-
-sox
-
-keyboard
+*Make sure these are installed on your system before running the script:*
+* *Python 3.9 or higher
+* *FFmpeg (must include ffplay)
+* *SoX (Sound eXchange)
+* *Windows OS (recommended — hotkeys tested here)
+* *Python packages required:
+* *pydub
+* *sox
+* *keyboard
 
 **...................................................................................................................................................................................................................**
 
-📦 Installation
+**📦 INSTALLATION:**
 
 Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+* **git clone https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer.git**
 
-
-Install required Python packages:
-
-pip install pydub sox keyboard
+* **cd MP3-Audio-DSP-Semitone-Transposer**
 
 **...................................................................................................................................................................................................................**
 
-🎵 External Tools Setup
-FFmpeg + ffplay
+**Install required Python packages:**
 
-Install FFmpeg and make sure ffmpeg and ffplay are available in your system PATH.
-
-Test in terminal:
-
-ffmpeg -version
-ffplay -version
-
-
-If both print version info — you’re good.
-
-SoX
-
-Install SoX and ensure it is added to PATH.
-
-Test:
-
-sox --version
+*pip install pydub sox keyboard*
 
 **...................................................................................................................................................................................................................**
 
-📁 Project Setup
+**🎵 EXTERNAL TOOLS SETUP:**
 
-1️⃣ Put the Python script inside a folder
-2️⃣ Place your MP3 files in the same folder
-3️⃣ (Optional) Change the temp directory in the script if needed:
+**...................................................................................................................................................................................................................**
 
-TEMP_DIR = r"D:\ffmpeg_temp"
+**FFmpeg + ffplay**
+
+* **Install FFmpeg and make sure ffmpeg and ffplay are available in your system PATH.**
+* **Test in terminal:**
+* **ffmpeg -version**
+* **ffplay -version**
+* **If both print version info — you’re good.**
+
+**...................................................................................................................................................................................................................**
+
+**SoX**
+
+* **Install SoX and ensure it is added to PATH.**
+
+* **Test:**
+
+* **sox --version**
+
+**...................................................................................................................................................................................................................**
+
+**📁 HOW TO RUN:**
+
+* **1️⃣ Put the Python script inside a folder**
+* **2️⃣ Place your MP3 files in the same folder**
+* **3️⃣ Click the address bar(Navigation Bar)**
+* **4️⃣ Type cmd above in the adress bar and press enter**
+* **5️⃣ Now type inside cmd this: *python Audio_transposer.py***
 
 
 Make sure this folder path exists or can be created.
 
 **...................................................................................................................................................................................................................**
 
-▶️ Run
-python your_script_name.py
+**▶️ RUN:**
 
-
-Choose the MP3 number when prompted — rendering begins automatically.
-
-Keep the terminal focused for keyboard controls to work.
+* **python your_script_name.py**
+* **Choose the MP3 number when prompted — rendering begins automatically.**
+* **Keep the terminal focused for keyboard controls to work.**
