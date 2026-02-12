@@ -126,15 +126,17 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 
 Clone the repository:
 
-* **git clone https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer.git**
-
-* **cd MP3-Audio-DSP-Semitone-Transposer**
+```bash
+git clone https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer.git
+cd MP3-Audio-DSP-Semitone-Transposer
+```
 
 **...................................................................................................................................................................................................................**
 
 **Install required Python packages:**
-
-*pip install pydub sox keyboard*
+```bash
+pip install pydub sox keyboard
+```
 
 **...................................................................................................................................................................................................................**
 
