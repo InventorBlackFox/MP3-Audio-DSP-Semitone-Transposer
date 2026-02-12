@@ -18,6 +18,11 @@ for i, f in enumerate(mp3_files, start=1):
 song_index = int(input("\n👉 Enter the number of the MP3 you want to transpose: ")) - 1
 song_index %= len(mp3_files)
 
+# 🔁 LOOP MODE
+# True  = original -12 to +12 stepping
+# False = repeat SAME semitone forever
+loop_mode = True
+
 
 def shift_pitch(sound, semitones, outfile):
     temp_in = os.path.join(TEMP_DIR, "input.wav")
@@ -54,7 +59,6 @@ def semitone_from_index(index):
     return index - 12  # index 12 = 0 semitones
 
 
-# ✅ FIXED: no endpoint repeat
 def step_index(index, direction):
     """
     Moves by direction.
@@ -95,11 +99,12 @@ files = render_song(mp3_files[song_index])
 index = 12
 direction = -1
 
-print("\n🎮 CONTROLS (NO FREEZE ✅ + NO EDGE REPEAT ✅):")
+print("\n🎮 CONTROLS :")
 print("   CTRL + →    = +1 semitone")
 print("   CTRL + ←    = -1 semitone")
 print("   CTRL + ↑    = Next song")
 print("   CTRL + ↓    = Previous song")
+print("   CTRL + M    = Toggle Loop Mode (ON/OFF)")
 print("   CTRL + ESC  = Quit")
 print("\n💡 Keep terminal focused to control playback.\n")
 
@@ -108,24 +113,49 @@ player = None
 cooldown = 0.18
 last_press_time = 0
 
+# ✅ This cooldown is separate so CTRL+M feels responsive
+toggle_cooldown = 0.35
+last_toggle_time = 0
+
 while True:
     path = files[index]
     semitone = semitone_from_index(index)
-    print(f"🎵 Playing {semitone:+} semitones | Song {song_index+1}/{len(mp3_files)}")
+
+    loop_state = "ON 🔁 (-12 ↔ +12)" if loop_mode else "OFF 🔒 (repeat same pitch)"
+    print(
+        f"🎵 Playing {semitone:+} semitones | Song {song_index+1}/{len(mp3_files)} | Loop: {loop_state}"
+    )
 
     player = subprocess.Popen(
         ["ffplay", "-nodisp", "-autoexit", "-loglevel", "quiet", path],
-        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
     )
 
     while player.poll() is None:
         now = time.time()
 
+        # ✅ CTRL+M toggle loop mode (even mid playback)
+        if keyboard.is_pressed("ctrl+m") and (
+            now - last_toggle_time >= toggle_cooldown
+        ):
+            loop_mode = not loop_mode
+            last_toggle_time = now
+
+            if loop_mode:
+                print("🔁 Loop Mode ACTIVATED ✅ (Back to -12 ↔ +12 stepping)")
+            else:
+                print("🔒 Loop Mode DEACTIVATED ✅ (Repeating SAME semitone forever)")
+
+            # Restart playback immediately with new behavior
+            player.kill()
+            break
+
         if now - last_press_time >= cooldown:
 
             if keyboard.is_pressed("ctrl+esc"):
                 player.kill()
-                print("👋 Exiting. CTRL+ESC executed. Audio shutdown complete 🎧🫡")
+                print("👋 Exiting. CTRL+ESC executed. Audio shutdown complete 🎧")
                 raise SystemExit
 
             if keyboard.is_pressed("ctrl+right"):
@@ -157,5 +187,10 @@ while True:
         time.sleep(0.01)
 
     else:
-        # ✅ auto continue same direction, no endpoint repeat
-        index, direction = step_index(index, direction)
+        # ✅ When song ends naturally:
+        if loop_mode:
+            # original behavior: keep stepping -12 ↔ +12
+            index, direction = step_index(index, direction)
+        else:
+            # 🔒 loop OFF: repeat exact same pitch index
+            pass
