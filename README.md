@@ -127,8 +127,8 @@ Designed as a fast interactive transpose explorer for music practice, pitch test
 Clone the repository:
 
 ```bash
-git clone https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer.git
-cd MP3-Audio-DSP-Semitone-Transposer
+git clone https://github.com/InventorBlackFox/AudioTransposer.git
+cd AudioTransposer
 ```
 
 **...................................................................................................................................................................................................................**
