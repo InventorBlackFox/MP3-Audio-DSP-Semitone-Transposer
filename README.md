@@ -1,5 +1,5 @@
 # MP3 AudioTransposer
->This Project Changes the Semitones of a song between loop cycles ranging from -12 to +12:
+**This Project Changes the Semitones of a song between loop cycles ranging from -12 to +12:**
 
 
 
