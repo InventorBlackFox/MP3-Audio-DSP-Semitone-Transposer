@@ -175,8 +175,17 @@ Make sure this folder path exists or can be created.
 
 **...................................................................................................................................................................................................................**
 
-**▶️ RUN:**
 
-* **python your_script_name.py**
-* **Choose the MP3 number when prompted — rendering begins automatically.**
-* **Keep the terminal focused for keyboard controls to work.**
+**🔧 TECHNOLOGIES AND SOFTWARES USED:**
+
+* **PYTHON**
+* **STANDARD LIBRARIES like os,subprocess,time**
+* **PYDUB**
+* **sox(PYTHON WRAPPER)**
+* **SoX ENGINE(EXTERNAL BINARY)**
+* **FFmpeg / FFplay**
+* **KEYBOARD**
+* **MP3 AND WAV FILE FORMATS INVOLVED**
+
+**...................................................................................................................................................................................................................**
+**...................................................................................................................................................................................................................**
