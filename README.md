@@ -209,8 +209,9 @@ Make sure this folder path exists or can be created.
 
 ## 🎥 DEMO
 
-https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer/blob/main/Short_audio_transposer.mp4
-https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer/blob/main/Very_Short_Demo_Audio_Semitone_Transposer.mp4
+*https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer/blob/main/Short_audio_transposer.mp4*
+
+*https://github.com/InventorBlackFox/MP3-Audio-DSP-Semitone-Transposer/blob/main/Very_Short_Demo_Audio_Semitone_Transposer.mp4*
 
 **...................................................................................................................................................................................................................**
 **...................................................................................................................................................................................................................**
